@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+    --font-primary: 'Josefin Sans';
+
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background-blue: hsl(192, 100%, 67%);
+    --Check-Background-pink: hsl(280, 87%, 65%);
+
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Grayish-Blue: hsl(234, 11%, 52%);
+    --Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+/* ### Light Theme
+
+- Very Light Gray: hsl(0, 0%, 98%)
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+- Very Dark Grayish Blue: hsl(235, 19%, 35%) */
+
+
+body {
+    font-family: var(--font-primary), sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 36%;
+    background-image: url(/assets/img/bg-mobile-dark.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.navbar h1 {
+    font-size: 30px;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.todo-field {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    padding: 0.8rem;
+    width: 80%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.todo-field input[type="radio"] {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background: var(--Very-Dark-Grayish-Blue);
+    border-radius: 50%;
+    border: 1px solid var(--Dark-Grayish-Blue);
+    margin: 0;
+}
+
+.todo-field input:nth-child(2) {
+    font-size: 14px;
+    font-family: var(--font-primary);
+    color: #FFF;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    border: none;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.todo-field input::placeholder {
+    color: hsl(234, 11%, 52%);
+}
+
+.todo-field input[type="radio"]:checked {
+    background-image: 
+        url('/assets/img/icon-check.svg'), 
+        radial-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%) 80%);
+    background-repeat: no-repeat;
+}
