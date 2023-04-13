@@ -51,7 +51,7 @@ Os usuários devem ser capazes de:
 
 ## Minha caminhada
 
-- [ ] Layout mobile
+- [x] Layout mobile
 - [ ] Layout desktop
 - [ ] Estados de foco
 - [ ] Feature de adicionar tarefas
