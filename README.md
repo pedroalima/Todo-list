@@ -39,8 +39,9 @@ Os usuários devem ser capazes de:
 ### Screenshots
 
 <html>
-  <!-- <h4>Layout mobile tema padrão</h4>
-  <img src="./assets/.png" width="300px">
+  <h4>Layout mobile tema padrão</h4>
+  <img src="./assets/img/mobile-layout.png" width="300px">
+  <!-- 
   <h4>Layout mobile tema claro </h4>
   <img src="./assets/.png" width="300px">
   <h4>Layout desktop tema padrão</h4>
