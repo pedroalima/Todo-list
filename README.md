@@ -41,8 +41,12 @@ Os usuários devem ser capazes de:
 <html>
   <h4>Layout mobile tema padrão</h4>
   <img src="./assets/img/mobile-layout.png" width="300px">
+  <h4>Layout mobile tema claro</h4>
+  <img src="./assets/img/mobile-layout-light.png" width="300px">
   <h4>Layout desktop tema padrão</h4>
   <img src="./assets/img/desktop-layout.png" width="920px">
+  <h4>Layout desktop tema claro</h4>
+  <img src="./assets/img/desktop-layout-light.png" width="920px">
   <!-- 
   <h4>Layout mobile tema claro </h4>
   <img src="./assets/.png" width="300px">
@@ -53,29 +57,29 @@ Os usuários devem ser capazes de:
 ## Minha caminhada
 
 1º dia
-- [x] Layout mobile
+- [x] Preparativos em mobile first
 
 2º dia
+- [x] Layout mobile
+
+3º dia
 - [x] Layout desktop
 - [x] Estados de foco
 
-3º dia
-- [ ] Feature de temas
-- [ ] Feature de adicionar tarefas
-
 4º dia
+- [x] Feature de temas
+- [x] Feature de adicionar tarefas
+
+5º dia
 - [ ] Feature de marcar tarefas
 - [ ] Feature de excluir uma tarefa
 
-
-5º dia
+6º dia
 - [ ] Feature de filtar tarefas
 - [ ] Feature de limpar todas tarefas
 
-6º dia
+7º dia
 - [ ] Feature de arrastar tarefas
-
-7º dia 
 - [ ] Refatoração
 
 ### Propriedades
