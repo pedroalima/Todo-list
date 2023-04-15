@@ -2,29 +2,39 @@
 
 :root {
     --font-primary: 'Josefin Sans';
-
-    --main-background: hsl(236, 22%, 13%);
-    --section-background: hsl(235, 24%, 19%);
     --font-color-primary: hsl(234, 39%, 85%);
     --font--color-secondary: hsl(234, 11%, 52%);
+    --color-tittle: hsl(0, 0%, 98%);
     --color-checkbox-border: hsl(237, 14%, 26%);
     --color-border: hsl(233, 14%, 35%);
-    --gradient: linear-gradient(
-        45deg,
-        hsl(192, 100%, 67%),
-        hsl(280, 87%, 65%) 80%);
+    --gradient: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%) 80%);
     --shadow-color: rgba(22, 23, 34, 0.6);
     --button-active: hsl(220, 98%, 61%);
     --elements-hover: hsl(236, 33%, 92%);
+    --main-background: hsl(236, 22%, 13%);
+    --section-background: hsl(235, 24%, 19%);
+    --icon-theme: url("/assets/img/icon-sun.svg");
+    --mobile-background-theme: url("/assets/img/bg-mobile-dark.jpg");
+    --desktop-background-theme: url("/assets/img/bg-desktop-dark.jpg");
 }
 
-/* ### Light Theme
-
-- Very Light Gray: hsl(0, 0%, 98%)
-- Very Light Grayish Blue: hsl(236, 33%, 92%)
-- Light Grayish Blue: hsl(233, 11%, 84%)
-- Dark Grayish Blue: hsl(236, 9%, 61%)
-- Very Dark Grayish Blue: hsl(235, 19%, 35%) */
+.light-theme:root {
+    --font-primary: 'Josefin Sans';
+    --font-color-primary: hsl(235, 19%, 35%);
+    --font--color-secondary: hsl(236, 9%, 61%);
+    --color-tittle: hsl(0, 0%, 98%);
+    --color-checkbox-border: hsl(233, 11%, 84%);
+    --color-border: hsl(233, 11%, 84%);
+    --gradient: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%) 80%);
+    --shadow-color: rgba(22, 23, 34, 0.1);
+    --button-active: hsl(220, 98%, 61%);
+    --elements-hover: hsl(235, 19%, 35%);
+    --main-background:hsl(0, 0%, 98%);
+    --section-background: hsl(0, 0%, 98%);
+    --icon-theme: url("/assets/img/icon-moon.svg");
+    --mobile-background-theme: url("/assets/img/bg-mobile-light.jpg");
+    --desktop-background-theme: url("/assets/img/bg-desktop-light.jpg");
+}
 
 * {
     box-sizing: border-box;
@@ -41,7 +51,7 @@ body {
 header {
     width: 100%;
     height: 36%;
-    background-image: url("/assets/img/bg-mobile-dark.jpg");
+    background-image: var(--mobile-background-theme);
     background-size: cover;
 }
 
@@ -57,14 +67,25 @@ header {
 .navbar h1 {
     font-size: 30px;
     font-weight: 700;
-    color: #FFF;
+    color: var(--color-tittle);
     text-transform: uppercase;
     letter-spacing: 3vw;
 }
 
+.navbar__theme input {
+    display: none;
+}
+
+.change-theme {
+    background-image: var(--icon-theme);
+    padding: 8px 14px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
 main {
     background: var(--main-background);
-    height: 64%;
+    height: 74%;
     text-align: center;
     position: relative;
 }
@@ -104,7 +125,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked {
     background-image: url('/assets/img/icon-check.svg'),
-                      var(--gradient);
+    var(--gradient);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -114,11 +135,7 @@ input[type="checkbox"]:checked ~ label {
     color: var(--font--color-secondary);
 }
 
-.todo-field p {
-    display: none;
-}
-
-.todo-field input:nth-child(3) {
+.todo-field input:nth-child(2) {
     font-family: var(--font-primary);
     font-size: 14px;
     color: var(--font-color-primary);
@@ -126,6 +143,10 @@ input[type="checkbox"]:checked ~ label {
     border: none;
     width: 90%;
     padding: 0.4rem;
+}
+
+.todo-field input:nth-child(2):focus {
+    outline: none;
 }
 
 .todo-field input::placeholder {
@@ -206,7 +227,7 @@ button:active {
 
 @media screen and (min-width: 1360px) {
     header {
-        background-image: url("/assets/img/bg-desktop-dark.jpg");
+        background-image: var(--desktop-background-theme);
         height: 43%;
     }
     
@@ -240,27 +261,21 @@ button:active {
         gap: 1rem;
     }
 
-    .todo-field p {
-        display: block;
-        font-size: 16px;
-        color: var(--font-color-primary);
-    }
-
     input[type="checkbox"] {
         width: 22px;
         height: 22px;
     }
     
-    .todo-field input:nth-child(3) {
-        width: 62%;
-        font-size: 16px;
+    .todo-field input:nth-child(2) {
+        width: 90%;
+        font-size: 18px;
         background-color: var(--section-background);
     }
     
     .todo__list {
         background: var(--section-background);
         border-radius: 4px;
-        box-shadow: 0 2rem 60px 1.5rem var(--shadow-color);
+        box-shadow: 0 2rem 40px 0.1rem var(--shadow-color);
     }
     
      .todo__item {
@@ -274,7 +289,8 @@ button:active {
     .todo__item label {
         top: 25px;
         left: 55px;
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: 500;
     }
     
     .todo__item i img {
@@ -288,8 +304,20 @@ button:active {
     }
 
     .todo__item:hover > input[type="checkbox"] {
-        border: 1px solid;
-        border-image: var(--gradient) 1;
+        border: 1 solid #FFF;
+        border-radius: 50%;
+        border: double 1px transparent;
+        background-image: linear-gradient(var(--section-background), var(--section-background)),
+        var(--gradient);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+
+    .todo__item:hover > input[type="checkbox"]:checked {
+        background-image: url('/assets/img/icon-check.svg'),
+        var(--gradient);
+        background-repeat: no-repeat;
+        background-position: center center;
     }
     
     .todo__item-footer {

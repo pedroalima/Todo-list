@@ -6,23 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/theme.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <h1>Todo</h1>
-            <img src="./assets/img/icon-moon.svg" srcset="./assets/img/icon-sun.svg" alt="Icone indicador de temas, image do sol para claro e imagem da lua para escuro">
+            <div class="navbar__theme">
+                <input type="checkbox" id="buttonTheme">
+                <label for="buttonTheme" class="change-theme"></label>
+            </div>
         </nav>
     </header>
 
     <main>
         <section class="todo">
-            <div class="todo-field">
-                <input type="checkbox" name="" id="">
-                <p>Currently typing</p>
-                <input type="text" placeholder="Create a new todo...">
-            </div>
+            <form class="todo-field" id="todoForm">
+                <input type="checkbox">
+                <input type="text" id="todoInput" placeholder="Create a new todo...">
+            </form>
 
             <ul class="todo__list">
                 <li class="todo__item">
@@ -32,12 +36,17 @@
                 </li>
                 <li class="todo__item">
                     <input type="checkbox" id="todo-item2">
-                    <label for="todo-item2">Exercises</label>
+                    <label for="todo-item2">Study JavaScript</label>
                     <i><img src="./assets/img/icon-cross.svg" alt="Icone em formato de X"></i>
                 </li>
                 <li class="todo__item">
                     <input type="checkbox" id="todo-item3">
-                    <label for="todo-item3">Exercises</label>
+                    <label for="todo-item3">Study SASS</label>
+                    <i><img src="./assets/img/icon-cross.svg" alt="Icone em formato de X"></i>
+                </li>
+                <li class="todo__item">
+                    <input type="checkbox" id="todo-item4">
+                    <label for="todo-item4">Practice</label>
                     <i><img src="./assets/img/icon-cross.svg" alt="Icone em formato de X"></i>
                 </li>
                 <li class="todo__item-footer">
