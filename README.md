@@ -71,8 +71,7 @@ Os usuários devem ser capazes de:
 - [x] Feature de adicionar tarefas
 
 5º dia
-- [ ] Feature de marcar tarefas
-- [ ] Feature de excluir uma tarefa
+- [x] Feature de excluir uma tarefa
 
 6º dia
 - [ ] Feature de filtar tarefas
