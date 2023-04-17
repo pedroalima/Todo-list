@@ -85,7 +85,7 @@ header {
 
 main {
     background: var(--main-background);
-    height: 74%;
+    height: 64%;
     text-align: center;
     position: relative;
 }
@@ -184,6 +184,10 @@ input[type="checkbox"]:checked ~ label {
     color: var(--font-color-primary);
     font-size: 14px;
     font-weight: 400;
+}
+
+.todo__item i {
+    cursor: pointer;
 }
 
 .todo__item i img {

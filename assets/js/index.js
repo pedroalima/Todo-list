@@ -1,7 +1,7 @@
 // Variáveis
-const todoForm = document.querySelector("#todoForm")
+const todoForm = document.querySelector("#todoForm");
 const todoInput = document.querySelector("#todoInput");
-const todoList = document.querySelector(".todo__list")
+const todoList = document.querySelector(".todo__list");
 
 // Funções
 const saveTodo = (text) => {
@@ -19,11 +19,13 @@ const saveTodo = (text) => {
     todoLabel.innerText = text;
 
     const todoIcon = document.createElement("i");
-    todoIcon.innerHTML = '<img src="./assets/img/icon-cross.svg" alt="Icone em formato de X">';
+    todoIcon.innerHTML = '<img src="./assets/img/icon-cross.svg" class="remove" alt="Icone em formato de X">';
     todo.appendChild(todoIcon);
 
     const todoFooter = document.querySelector(".todo__item-footer");
     todoList.insertBefore(todo, todoFooter);
+
+    todoInput.value = "";
 
     console.log(todo);
 }
@@ -34,6 +36,16 @@ todoForm.addEventListener('submit', (e) => {
     const inputValue = todoInput.value;
     if (inputValue) {
         saveTodo(inputValue);
+    }
+
+});
+
+document.addEventListener('click', (e) => {
+    const targetElement = e.target;
+    const parentElement = targetElement.closest("li");
+
+    if (targetElement.classList.contains("remove")) {
+        parentElement.remove();
     }
 
 });
