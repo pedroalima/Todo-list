@@ -77,9 +77,8 @@ Os usuários devem ser capazes de:
 - [x] Feature de limpar tarefas completas
 
 7º dia
-- [ ] Feature de filtar tarefas
-- [ ] Feature de arrastar tarefas
-- [ ] Refatoração
+- [x] Feature de filtar tarefas
+- [x] Feature de tarefas restantes
 
 ### Propriedades
 
