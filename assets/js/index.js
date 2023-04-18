@@ -4,7 +4,7 @@ const todoInput = document.querySelector("#todoInput");
 const todoList = document.querySelector(".todo__list");
 
 // Funções
-const saveTodo = (text) => {
+const createTodo = (text) => {
     const todo = document.createElement("li");
     todo.classList.add("todo__item");
 
@@ -14,7 +14,7 @@ const saveTodo = (text) => {
     todo.appendChild(todoCheckbox);
 
     const todoLabel = document.createElement("label");
-    todoLabel.htmlFor = "todo-item5";
+    todoLabel.htmlFor = `todo-item`;
     todo.appendChild(todoLabel);
     todoLabel.innerText = text;
 
@@ -30,12 +30,24 @@ const saveTodo = (text) => {
     console.log(todo);
 }
 
+const clearCompleted = () => {
+    const todoItens = todoList.querySelectorAll(".todo__item");
+    
+    todoItens.forEach(item => {
+        const checkboxInput = todoList.querySelector("input[type='checkbox']");
+
+        if (item.classList.contains("todo__item") && checkboxInput.checked) {
+            item.remove();
+        }
+    });
+}
+
 // Eventos
 todoForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const inputValue = todoInput.value;
     if (inputValue) {
-        saveTodo(inputValue);
+        createTodo(inputValue);
     }
 
 });
@@ -46,6 +58,10 @@ document.addEventListener('click', (e) => {
 
     if (targetElement.classList.contains("remove")) {
         parentElement.remove();
+    } 
+
+    if (targetElement.id === "clearCompleted") {
+        clearCompleted();
     }
 
 });
