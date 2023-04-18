@@ -229,6 +229,14 @@ button:active {
     padding: 2rem;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
 @media screen and (min-width: 1360px) {
     header {
         background-image: var(--desktop-background-theme);
