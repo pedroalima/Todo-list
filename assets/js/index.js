@@ -10,11 +10,9 @@ const createTodo = (text) => {
 
     const todoCheckbox = document.createElement("input");
     todoCheckbox.setAttribute("type", "checkbox");
-    todoCheckbox.setAttribute("id", "todo-item5");
     todo.appendChild(todoCheckbox);
 
     const todoLabel = document.createElement("label");
-    todoLabel.htmlFor = `todo-item`;
     todo.appendChild(todoLabel);
     todoLabel.innerText = text;
 
@@ -26,17 +24,13 @@ const createTodo = (text) => {
     todoList.insertBefore(todo, todoFooter);
 
     todoInput.value = "";
-
-    console.log(todo);
 }
 
 const clearCompleted = () => {
     const todoItens = todoList.querySelectorAll(".todo__item");
-    
-    todoItens.forEach(item => {
-        const checkboxInput = todoList.querySelector("input[type='checkbox']");
 
-        if (item.classList.contains("todo__item") && checkboxInput.checked) {
+    todoItens.forEach(item => {
+        if (item.classList.contains("todo__item") && item.children[0].checked) {
             item.remove();
         }
     });
