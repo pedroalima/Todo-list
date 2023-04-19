@@ -46,6 +46,8 @@ Os usuários devem ser capazes de:
   <img src="./assets/img/desktop-layout.png" width="920px">
   <h4>Layout desktop tema claro</h4>
   <img src="./assets/img/desktop-layout-light.png" width="920px">
+  <h1>Testando funcionalidades</h1>
+  <img src="./assets/img/testando.gif" width="920px">
 </html>
 
 ## Resultado: [Veja como ficou!](https://todo-list-pedroalima.vercel.app/)
