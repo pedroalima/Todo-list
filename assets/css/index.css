@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
-:root {
+.dark-theme:root {
     --font-primary: 'Josefin Sans';
     --font-color-primary: hsl(234, 39%, 85%);
     --font--color-secondary: hsl(234, 11%, 52%);
@@ -18,7 +18,7 @@
     --desktop-background-theme: url("/assets/img/bg-desktop-dark.jpg");
 }
 
-.light-theme:root {
+:root {
     --font-primary: 'Josefin Sans';
     --font-color-primary: hsl(235, 19%, 35%);
     --font--color-secondary: hsl(236, 9%, 61%);
